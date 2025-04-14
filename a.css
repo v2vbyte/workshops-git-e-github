@@ -1,8 +1,93 @@
-h1{
-    background-color: blue;
-    color: white;
-    width: 100%;
-    height: 50vh;
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, ol, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-} 
+/* Set a clean and accessible font */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 20px;
+}
+
+/* Add focus styles for accessibility */
+a:focus, button:focus {
+    outline: 2px solid #ff4500; /* Orange focus outline */
+    outline-offset: 2px;
+}
+
+/* Style headings */
+h1, h2, h3 {
+    color: #4b0082; /* Indigo headings */
+    margin-bottom: 10px;
+}
+
+/* Add some spacing for paragraphs */
+p {
+    margin-bottom: 15px;
+    color: #2e8b57; /* Sea green text */
+}
+
+/* Style links */
+a {
+    color: #ff4500; /* Orange links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ff6347; /* Tomato color on hover */
+}
+
+/* Add a visually appealing button style */
+button {
+    background-color: #ff4500; /* Orange button */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff6347; /* Tomato color on hover */
+}
+
+/* Add a container for layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #4b0082; /* Indigo border */
+}
+
+/* Improve list styles */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+    color: #4682b4; /* Steel blue list items */
+}
+
+/* Add responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
+
  

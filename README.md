@@ -123,6 +123,8 @@ Você acabou de salvar uma versão do projeto com esse conteúdo.
 
 Agora seu projeto está no GitHub!
 
+![Principais comandos](work2.png)
+
 ---
 
 ## **6. Criando e Trabalhando com Branches**

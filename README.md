@@ -54,13 +54,25 @@ Uma *branch* (ramo) é uma versão paralela do projeto. Serve para testar ou des
 
 ## **3. Configurando o Ambiente**
 
-1. **Instale o Git**: [https://git-scm.com](https://git-scm.com)
-2. **Crie uma conta no GitHub**: [https://github.com](https://github.com)
-3. **Instale o VS Code**: [https://code.visualstudio.com](https://code.visualstudio.com)
+A primeira tarefa a cumprir é realizar a instalação e a configuração do Git em seu computador. Este procedimento é feito apenas uma vez na conta do usuário. 
+
+- Se seu PC é Windows, a instalação é feita por meio de [https://gitforwindows.org](https://gitforwindows.org).
+- Se for Mac ou Linux, a instalação é feita por meio de [https://git-scm.com/book/pt-br/v2/Começando-Instalando-o-Git](https://git-scm.com/book/pt-br/v2/Começando-Instalando-o-Git).
+
+Agora você precisa configurar seu nome de usuário e endereço de e-mail. Isto é importante porque cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você começa a criar:
+
+```bash
+git config --global user.name "Fulano de Tal"
+git config --global user.email fulanodetal@exemplo.br
+```
+
+Reiterando, você precisará fazer isso somente uma vez se tiver usado a opção `--global`, porque então o Git usará esta informação para qualquer coisa que você fizer naquele sistema. Se você quiser substituir essa informação com nome diferente para um projeto específico, você pode rodar o comando sem a opção `--global` dentro daquele projeto.
+
+Muitas ferramentas GUI o ajudarão com isso quando forem usadas pela primeira vez, como o Visual Studio Code.
 
 ---
 
-## **4. Primeiros Passos no VS Code com Git**
+## 4. Primeiros Passos no VS Code com Git (A partir de repositório local)
 
 ### **Passo a passo**
 
@@ -110,7 +122,7 @@ Você acabou de salvar uma versão do projeto com esse conteúdo.
 
 ---
 
-## **5. Subindo para o GitHub**
+#### F) Subindo para o GitHub
 
 1. No GitHub, crie um novo repositório (sem README).
 2. Copie a URL (ex: `https://github.com/usuario/meu-projeto.git`).
@@ -124,6 +136,93 @@ Você acabou de salvar uma versão do projeto com esse conteúdo.
 Agora seu projeto está no GitHub!
 
 ![Principais comandos](work2.png)
+
+---
+
+Claro! Aqui está o texto refeito, considerando que a pessoa está trabalhando diretamente em um repositório remoto no GitHub:
+
+---
+
+## 5. Primeiros Passos no VS Code com Git - Repositório Remoto
+
+### **Passo a passo**
+
+#### A) Clonar um repositório remoto para a máquina local
+
+1. No GitHub, vá até o repositório que você deseja trabalhar e copie a URL de clonagem (ex: `https://github.com/usuario/meu-projeto.git`).
+2. No terminal do VS Code, navegue até o diretório onde deseja salvar o projeto:
+   ```bash
+   cd caminho/para/diretorio
+   ```
+3. Clone o repositório remoto para sua máquina local:
+   ```bash
+   git clone https://github.com/usuario/meu-projeto.git
+   ```
+   Isso cria uma cópia local do repositório, com o conteúdo do GitHub já na sua máquina.
+
+#### B) Navegar até o repositório clonado
+
+```bash
+cd meu-projeto
+```
+
+Agora você está dentro do repositório clonado, pronto para trabalhar nele.
+
+#### C) Verifique o status do repositório local
+
+```bash
+git status
+```
+
+Este comando mostra o estado atual do repositório local, como arquivos modificados, não rastreados ou pendentes de commit.
+
+#### D) Adicione alterações à área de staging
+
+Agora, suponhamos que você modificou ou criou um arquivo. Para adicionar o arquivo à área de staging (preparando-o para o commit), execute:
+
+```bash
+git add nome-do-arquivo
+```
+
+Para adicionar todos os arquivos modificados:
+
+```bash
+git add .
+```
+
+#### E) Faça o commit das alterações
+
+Após adicionar as modificações à área de staging, salve as alterações com um commit:
+
+```bash
+git commit -m "Descreva o que foi alterado"
+```
+
+Esse comando cria uma versão do seu repositório local com o conteúdo alterado.
+
+---
+
+#### 6. Enviando Alterações para o GitHub
+
+1. Verifique se você está na branch correta (geralmente `main` ou `master`):
+
+```bash
+git branch
+```
+
+Se for necessário, mude para a branch principal:
+
+```bash
+git checkout main
+```
+
+2. Envie as alterações locais para o repositório remoto no GitHub:
+
+```bash
+git push origin main
+```
+
+Agora, suas modificações estão no GitHub e atualizadas no repositório remoto! Esse fluxo assume que você já tenha um repositório remoto no GitHub e que está interagindo com ele, mantendo a sincronia entre seu repositório local e o repositório remoto.
 
 ---
 
@@ -145,10 +244,12 @@ Agora seu projeto está no GitHub!
 
 ## **7. Fazendo Pull Request no GitHub**
 
-1. Acesse o repositório no GitHub.
-2. Vá na aba “Pull Requests” > “New Pull Request”.
-3. Escolha sua branch como origem e `main` como destino.
-4. Escreva uma descrição e clique em “Create Pull Request”.
+Após o `push`, ou seja, após o envio para o repositório remoto em uma branch que não seja a principal, as solicitações de `merge` devem ser feitas a partir de um **Pull Request**. Para isso:
+
+2. Acesse o repositório no GitHub.
+3. Vá na aba “Pull Requests” > “New Pull Request”.
+4. Escolha sua branch como origem e `main` como destino.
+5. Escreva uma descrição e clique em “Create Pull Request”.
 
 Agora alguém pode revisar seu código antes de juntar tudo.
 
@@ -166,7 +267,7 @@ Agora alguém pode revisar seu código antes de juntar tudo.
 
 ---
 
-## **Links Úteis***
+## Links Úteis
 
 ### 📚 Guias e Tutoriais Escritos
 

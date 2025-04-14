@@ -48,6 +48,8 @@ Uma *branch* (ramo) é uma versão paralela do projeto. Serve para testar ou des
 ### **Pull Request**
 É um pedido para unir sua *branch* com outra (geralmente a principal). No GitHub, você faz isso quando quer que suas mudanças sejam revisadas e aprovadas.
 
+![Áreas do Git](featured.png)
+
 ---
 
 ## **3. Configurando o Ambiente**

@@ -74,7 +74,7 @@ Uma *branch* (ramo) é uma versão paralela do projeto. Serve para testar ou des
    ```
    Isso cria o repositório local (a pasta `.git`).
 
-#### B) Crie um arquivo `index.html`
+#### B) Crie um arquivo qualquer para compor seu projeto. Neste exemplo, estamos iniciando um projeto front-end com `index.html`.
 
 ```html
 <!DOCTYPE html>

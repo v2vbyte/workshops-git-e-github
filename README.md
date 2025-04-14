@@ -1,5 +1,7 @@
 # Workshops - Git & GitHub
 
+[Relembre os principais pontos do último encontro](https://youtu.be/MTEnfjZandQ)
+
 ---
 
 ## **1. O que é Git e GitHub?**
